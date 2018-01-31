@@ -1,6 +1,7 @@
 import sys
 from pprint import pprint
-from PyQt5.QtWidgets import QApplication, QWidget, QDialog, QMainWindow
+from PyQt5.QtWidgets import QApplication,QAction, QWidget, QDialog, QMainWindow
+from PyQt5.QtGui import QIcon
 # from structure import Ui_Dialog
 # from widget import Ui_Form
 from main_ex import Ui_MainWindow
@@ -24,6 +25,7 @@ class AppWindow(QMainWindow):
         self.statusBar().showMessage('operating')
         menuBar = self.menuBar()
         file_menu = menuBar.addMenu('&File')
+        exit_action = QAction(QIcon('exit.png'), '&Exit', self)
         # menuBar.setNativeMenuBar(False) # on mac only
         self.setGeometry(900, 200, 600, 400)
 
